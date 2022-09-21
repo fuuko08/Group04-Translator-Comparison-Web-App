@@ -7,7 +7,7 @@ I WANT to translate a text into different languages
 SO THAT I can communicate with my teammate from other countries
 ```
 
-## Acceptain Criterias
+## Acceptance Criteria
 ```
 GIVEN a application with English text inputs
 WHEN I click on the drop down button
@@ -21,3 +21,4 @@ THEN the page will be cleared
 ```
 
 ## Mock Up
+<img width="1130" alt="Screen Shot 2022-09-20 at 9 13 44 PM" src="https://user-images.githubusercontent.com/108949883/191413046-7ff58407-1920-4046-86e3-78d98bf04977.png">
