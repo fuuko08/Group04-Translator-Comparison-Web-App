@@ -24,41 +24,54 @@
 		</nav>
 	</header> 
 	<main class="container">
-			<div class="row ">
+			<div class="row px-3">
 				<section class="col-12 my-5 p-0">
 					<form>
-					<div class="form-group">
-						<textarea class="form-control border-dark" id="exampleFormControlTextarea1" rows="7"></textarea>
-						<!-- Clear and Translate Buttons -->
-						</div>
-						<div class="float-right">
-							<button type="button" class="btn btn-light">Clear</button>
-							<button type="button" class="btn btn-primary">Translate</button>
-						</div>
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">English</label>
+							<textarea class="form-control border-dark" id="exampleFormControlTextarea1" rows="7" placeholder="Enter Text"></textarea>
+							<!-- Dropdown -->
+							</div class="float-left"><div>
+							<div class="btn-group">
+								<button class="btn btn-secondary btn-sm dropdown-toggle language-button" type="button" data-toggle="dropdown" aria-expanded="false">Italian</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Spanish</a>
+									<a class="dropdown-item active" href="#">Italian</a>
+									<a class="dropdown-item" href="#">French</a>
+								</div>
+							</div>
+								<!-- Clear and Translate Buttons -->
+								<button type="button" class="btn btn-primary btn-sm translate-button">Translate</button>
+									<div class="float-right">
+									<button type="button" class="btn btn-light btn-sm clear-button">Clear</button>
+								</div>
+							</div>	
+						</div>	
 					</form>
-					</section>
-				</div>
-			
+				</section>
+			</div>
 		
-			<div class="row">
+			<div class="row px-3">
 				<div class="col-12 col-md-6 p-0 pr-md-2" id="google-translate">
 					<div class="form-group">
-						<textarea class="form-control border-dark" id="exampleFormControlTextarea1" rows="7"></textarea>
+						<label for="exampleFormControlTextarea1">Google Translate Version</label>
+						<textarea class="form-control border-dark bottom-field" id="exampleFormControlTextarea1" rows="9" disabled></textarea>
 					</div>
 					</div>
 					<div class="col-12 col-md-6 p-0 pl-md-2" id="translo-translate">
 						<div class="form-group">
-						<textarea class="form-control border-dark" id="exampleFormControlTextarea1" rows="7"></textarea>
+						<label for="exampleFormControlTextarea1">Translo Version</label>
+						<textarea class="form-control border-dark bottom-field" id="exampleFormControlTextarea1" rows="9" disabled></textarea>
 						</div>
+
 					<!-- Cancel and Save Buttons -->
-					<div class="float-right">
+					<!-- <div class="float-right">
 						<button type="button" class="btn btn-light">Cancel</button>
 						<button type="button" class="btn btn-save">Save</button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 	</main>
-
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 

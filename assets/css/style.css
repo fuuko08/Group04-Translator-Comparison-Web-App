@@ -1,6 +1,9 @@
 .bg-custom {
     background-color: #f1f1f4;
+    margin-bottom: -20px;
 }
+
+
 
 #google-translate {
     padding-right: 10px;
@@ -9,4 +12,36 @@
 .btn-save {
     background-color: rgb(15, 153, 15);
     color: white;
+}
+
+.bottom-field:disabled {
+    background-color: white;
+}
+
+.language-button {
+    width: 250px;
+    margin-right: 7px;
+    text-align: left;
+    background-color: rgb(227, 224, 224);
+    color: black;
+    font-size: 16px;
+    border: none;
+}
+
+.translate-button {
+    border-radius: 3px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.dropdown-menu {
+    width: 250px;
+}
+
+.clear-button {
+    border-color: rgb(227, 224, 224);
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
