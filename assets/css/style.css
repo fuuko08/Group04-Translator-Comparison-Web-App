@@ -3,8 +3,6 @@
     margin-bottom: -20px;
 }
 
-
-
 #google-translate {
     padding-right: 10px;
 }
@@ -40,8 +38,65 @@
 
 .clear-button {
     border-color: rgb(227, 224, 224);
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 14px;
 }
+
+@media only screen and (max-width: 767px) {
+#exampleFormControlTextarea1Top {
+    height: 90px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+    #exampleFormControlTextarea1Bottom {
+        height: 150px;
+    }
+    }
+
+@media only screen and (min-width: 992px) {
+    #exampleFormControlTextarea1Bottom {
+        height: 350px;
+    }
+    }
+
+@media only screen and (min-width: 1200px) {
+    #exampleFormControlTextarea1Bottom {
+        height: 500px;
+    }
+    }
+
+@media only screen and (min-width: 1300px) {
+#exampleFormControlTextarea1Bottom {
+    height: 720px;
+}
+}
+
+@media only screen and (max-width: 452px) {
+.english-buttons  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+}
+
+@media only screen and (max-width: 382px) {
+.translate-button  {
+    margin-top: 12px;
+}
+}
+
+@media only screen and (max-width: 452px) {
+.clear-button  {
+    margin-top: 12px;
+    float: none;
+}
+}
+
+/* @media only screen and (max-width: 452px) {
+    .clear-button {
+        display: flex;
+        flex-wrap: wrap;
+        float: none;
+        margin-left: 75px;
+    }
+    } */
