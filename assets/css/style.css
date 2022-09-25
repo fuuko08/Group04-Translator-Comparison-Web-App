@@ -59,17 +59,23 @@
     }
     }
 
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1300px) {
     #exampleFormControlTextarea1Bottom {
         height: 500px;
     }
-    }
+    } */
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
 #exampleFormControlTextarea1Bottom {
-    height: 720px;
+    height: 600px;
 }
 }
+
+@media only screen and (min-width: 1915px) {
+    #exampleFormControlTextarea1Bottom {
+        height: 860px;
+    }
+    }
 
 @media only screen and (max-width: 452px) {
 .english-buttons  {
