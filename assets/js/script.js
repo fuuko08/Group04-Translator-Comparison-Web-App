@@ -1,4 +1,5 @@
 jQuery(function($) {
+    // click translate btn to get output 
     $("#translateBtn").click(function() {
         
         var firstString = $("#textarea1").val();
@@ -7,13 +8,13 @@ jQuery(function($) {
 
         highLight(firstString, secondString);
     });
-
+    //functiono to split the out strings into arrays
     function highLight(firstString, secondString) {        
         var firstStringArray = firstString.split(" ");        
         var secondStringArray = secondString.split(" ");
 
         var highlightPosArray = [];
-
+// function to put all the unmatched words into and array
         jQuery.each(firstStringArray, function(indexArr2, itemArr2){
 
             if(itemArr2 == secondStringArray[indexArr2]){
@@ -23,7 +24,7 @@ jQuery(function($) {
                 highlightPosArray.push(indexArr2);
             }
         }); 
-
+// function to highlight the unmatched words and render it back to the textarea
             if(highlightPosArray.length>0){
                 var finalString ="";
                 jQuery.each(highlightPosArray, function(currentIndex, currentItem){
@@ -38,5 +39,12 @@ jQuery(function($) {
                 $('#testArea').append(finalString);
                 console.log(finalString);
             }        
-    }
-})
+        }
+
+        // click the clear btn to clear all text
+    $("#clearBtn").click(function(event) {
+        event.preventDefault();
+        $("#testArea").empty();
+
+    })
+});
