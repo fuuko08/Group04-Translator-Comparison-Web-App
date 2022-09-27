@@ -38,13 +38,15 @@ jQuery(function($) {
 
                 $('#testArea').append(finalString);
                 console.log(finalString);
+                $('#translo-translate').append(finalString);
             }        
-        }
+        };
+    
+    
 
         // click the clear btn to clear all text
     $("#clearBtn").click(function(event) {
         event.preventDefault();
         $("#testArea").empty();
-
     })
 });
