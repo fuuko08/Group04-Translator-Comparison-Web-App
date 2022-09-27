@@ -26,25 +26,39 @@
 	<main class="container-fluid">
 			<div class="row px-3">
 				<section class="col-12 my-5 p-0">
+
 					<form>
 						<div class="form-group">
 							<label for="exampleFormControlTextarea1">English</label>
 							<textarea class="form-control border-dark" id="exampleFormControlTextarea1Top" rows="7" placeholder="Enter Text"></textarea>
 							<!-- Dropdown -->
-							</div class="float-left"><div>
-							<div class="btn-group">
-								<button class="btn btn-secondary btn-sm dropdown-toggle language-button" type="button" data-toggle="dropdown" aria-expanded="false">Italian</button>
-								<div class="dropdown-menu">
+						<!-- <div class="float-left"></div> -->
+							<div class="mt-3 d-flex">
+							<div class="">
+								<select class="btn btn-secondary btn-sm dropdown-toggle language-button" name="languages" data-toggle="dropdown" aria-expanded="false">
+									<option value="italian">
+										Italian
+									</option>
+									<option value="spanish">
+										Spanish
+									</option>
+									<option value="french">
+										French
+									</option>
+								</select>
+							</div>
+								<!-- <div class="dropdown-menu">
 									<a class="dropdown-item" href="#">Spanish</a>
 									<a class="dropdown-item active" href="#">Italian</a>
 									<a class="dropdown-item" href="#">French</a>
-								</div>
+								</div> -->
 							<!-- Clear and Translate Buttons -->	
-							</div class ="english-buttons">
+							<div class ="english-buttons w-100">
 								<button type="button" class="btn btn-primary btn-sm translate-button">Translate</button>
-								<button type="button" class="btn btn-light btn-sm clear-button float-right">Clear</button>
+								<button type="button" class="btn btn-light btn-sm clear-button">Clear</button>
 							</div>	
 						</div>	
+					</div>
 					</form>
 				</section>
 			</div>

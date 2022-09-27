@@ -18,6 +18,7 @@
 
 .language-button {
     width: 250px;
+    height: 100%;
     margin-right: 7px;
     text-align: left;
     background-color: rgb(227, 224, 224);
@@ -30,6 +31,7 @@
     border-radius: 3px;
     padding-left: 14px;
     padding-right: 14px;
+    
 }
 
 .dropdown-menu {
@@ -39,6 +41,18 @@
 .clear-button {
     border-color: rgb(227, 224, 224);
     padding: 5px 14px;
+}
+
+.btn-group {
+    margin-top: 8px;
+}
+.english-buttons {
+   display: flex; 
+   justify-content: space-between; 
+}
+
+#clear {
+    float: right;
 }
 
 @media only screen and (max-width: 767px) {
@@ -67,7 +81,7 @@
 
 @media only screen and (min-width: 1500px) {
 #exampleFormControlTextarea1Bottom {
-    height: 600px;
+    height: 560px;
 }
 }
 
@@ -82,6 +96,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
+    margin-top: 8px;
+    
 }
 }
 
@@ -106,3 +122,25 @@
         margin-left: 75px;
     }
     } */
+
+@media only screen and (max-width: 455px) {
+.language-button {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.english-buttons {
+    justify-content: flex-start;
+}
+
+}
+
+/* .float-right {
+    float: right;
+} */
+
+
+
+   
+    
+  
