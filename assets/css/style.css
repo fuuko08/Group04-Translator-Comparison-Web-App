@@ -97,20 +97,16 @@
     flex-wrap: wrap;
     justify-content: start;
     margin-top: 8px;
-    
+}
+.clear-button  {
+    margin-top: 12px;
+    float: none;
 }
 }
 
 @media only screen and (max-width: 382px) {
 .translate-button  {
     margin-top: 12px;
-}
-}
-
-@media only screen and (max-width: 452px) {
-.clear-button  {
-    margin-top: 12px;
-    float: none;
 }
 }
 
@@ -128,9 +124,12 @@
     display: block;
     margin-bottom: 8px;
     width: 100%;
+    width: 100vw;
 }
 .english-buttons {
     justify-content: flex-start;
+    width: 15vw;
+    display: block;
 }
 }
 
