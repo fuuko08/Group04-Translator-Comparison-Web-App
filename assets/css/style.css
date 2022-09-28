@@ -56,19 +56,19 @@
 }
 
 @media only screen and (max-width: 767px) {
-#exampleFormControlTextarea1Top {
+#englishForm {
     height: 90px;
 }
 }
 
 @media only screen and (max-width: 767px) {
-    #exampleFormControlTextarea1Bottom {
+    #googleForm, #transloForm {
         height: 150px;
     }
     }
 
 @media only screen and (min-width: 768px) {
-    #exampleFormControlTextarea1Bottom {
+    #googleForm, #transloForm {
         height: 350px;
     }
     }
@@ -80,13 +80,13 @@
     } */
 
 @media only screen and (min-width: 1500px) {
-#exampleFormControlTextarea1Bottom {
+    #googleForm, #transloForm {
     height: 560px;
 }
 }
 
 @media only screen and (min-width: 1915px) {
-    #exampleFormControlTextarea1Bottom {
+    #googleForm, #transloForm {
         height: 860px;
     }
     }

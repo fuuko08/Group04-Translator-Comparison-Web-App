@@ -12,13 +12,19 @@
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<title>Translater Comparison</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+	crossorigin="anonymous">
+	</script>
+
 </head>
 
 <body>
 	<header class="container-fluid bg-custom">
 		<nav class="navbar navbar-light bg-custom">
 			<a class="navbar-brand" href="#">
-				<img src="./images/globe-icon.png" width="30" height="30" class="d-inline-block align-top my-color" alt="">
+				<img src="./images/globe-icon2.png" width="30" height="30" class="d-inline-block align-top my-color" alt="">
 				Translater Comparison
 			</a>
 		</nav>
@@ -30,35 +36,35 @@
 					<form>
 						<div class="form-group">
 							<label for="exampleFormControlTextarea1">English</label>
-							<textarea class="form-control border-dark" id="exampleFormControlTextarea1Top" rows="7" placeholder="Enter Text"></textarea>
+							<textarea class="form-control border-dark" id="englishForm" rows="7" placeholder="Enter Text"></textarea>
 							<!-- Dropdown -->
 						<!-- <div class="float-left"></div> -->
 							<div class="mt-3 d-flex">
-							<div class="">
-								<select class="btn btn-secondary btn-sm dropdown-toggle language-button" name="languages" data-toggle="dropdown" aria-expanded="false">
-									<option value="italian">
-										Italian
-									</option>
-									<option value="spanish">
-										Spanish
-									</option>
-									<option value="french">
-										French
-									</option>
-								</select>
-							</div>
-								<!-- <div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Spanish</a>
-									<a class="dropdown-item active" href="#">Italian</a>
-									<a class="dropdown-item" href="#">French</a>
-								</div> -->
-							<!-- Clear and Translate Buttons -->	
-							<div class ="english-buttons w-100">
-								<button type="button" class="btn btn-primary btn-sm translate-button">Translate</button>
-								<button type="button" class="btn btn-light btn-sm clear-button">Clear</button>
+								<div class="">
+									<select class="btn btn-secondary btn-sm dropdown-toggle language-button" name="languages" data-toggle="dropdown" aria-expanded="false">
+										<option value="italian">
+											Italian
+										</option>
+										<option value="spanish">
+											Spanish
+										</option>
+										<option value="french">
+											French
+										</option>
+									</select>
+								</div>
+									<!-- <div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Spanish</a>
+										<a class="dropdown-item active" href="#">Italian</a>
+										<a class="dropdown-item" href="#">French</a>
+									</div> -->
+								<!-- Clear and Translate Buttons -->	
+								<div class ="english-buttons w-100">
+									<button type="button" id="translateBtn" class="btn btn-primary btn-sm translate-button">Translate</button>
+									<button type="button" id="clearBtn" class="btn btn-light btn-sm clear-button">Clear</button>
+								</div>	
 							</div>	
-						</div>	
-					</div>
+						</div>
 					</form>
 				</section>
 			</div>
@@ -67,13 +73,13 @@
 				<div class="col-12 col-md-6 p-0 pr-md-2" id="google-translate">
 					<div class="form-group">
 						<label for="exampleFormControlTextarea1">Google Translate Version</label>
-						<div class="form-control border-dark bottom-field" id="exampleFormControlTextarea1Bottom" rows="9" disabled></div>
+						<div class="form-control border-dark bottom-field" id="googleForm" rows="9" disabled></div>
 					</div>
 					</div>
 					<div class="col-12 col-md-6 p-0 pl-md-2" id="translo-translate">
 						<div class="form-group">
 						<label for="exampleFormControlTextarea1">Translo Version</label>
-						<div class="form-control border-dark bottom-field" id="exampleFormControlTextarea1Bottom" rows="9" disabled></div>
+						<div class="form-control border-dark bottom-field" id="transloForm" rows="9" disabled></div>
 						</div>
 
 					<!-- Cancel and Save Buttons -->
@@ -86,10 +92,6 @@
 	</main>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
-	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-	crossorigin="anonymous">
-</script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
 	integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
 	crossorigin="anonymous">
