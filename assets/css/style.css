@@ -62,13 +62,13 @@
     }
 
 @media only screen and (max-width: 767px) {
-    #googleForm, #transloForm {
+    #googleForm, #deeplForm {
         height: 150px;
 }
 }
 
 @media only screen and (min-width: 768px) {
-    #googleForm, #transloForm {
+    #googleForm, #deeplForm {
         height: 350px;
 }
 }
@@ -80,13 +80,13 @@
     } */
 
 @media only screen and (min-width: 1500px) {
-    #googleForm, #transloForm {
+    #googleForm, #deeplForm {
     height: 560px;
 }
 }
 
 @media only screen and (min-width: 1915px) {
-    #googleForm, #transloForm {
+    #googleForm, #deeplForm {
         height: 860px;
 }
 }
