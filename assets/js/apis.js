@@ -1,4 +1,4 @@
-
+//initialize variables
 var languages = {
 	Afrikaans :  "af",
 	Amharic : "am",
@@ -130,18 +130,22 @@ var languages = {
 var selectorEl = $('.language-button');
 var key
 var output = $("#googleForm")
-var output2 = $('#transloForm')
+var output2 = $('#deeplForm')
 
-
+//start translate function 
 function translate (elementId, textbox, output2){
+	//on change of language dropdown
 	elementId.on("change", function(){
+			//get language from drop down
 			key = $(".language-button").val()
 			console.log(key)
+			//when user clicks translate btn
 			$("#translateBtn").on("click", function (){
 			var input = $("#englishForm").val();
 			console.log(input)
 			var othLang = languages[key]
 			console.log(othLang)
+			//start of first web API (google translate)
 			const encodedParams = new URLSearchParams();
 			encodedParams.append("q", input);
 			encodedParams.append("target", othLang);
@@ -157,11 +161,12 @@ function translate (elementId, textbox, output2){
 				},
 				body: encodedParams
 			};
-			
+			//fetch api and output into textbox 
 			fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
 				.then(response => response.json())
 				.then(response => textbox.text(response.data.translations[0].translatedText))
 				.catch(err => console.error(err));
+			//start of second web API (deepL)
 			const options2 = {
 				method: 'POST',
 				headers: {
@@ -172,6 +177,7 @@ function translate (elementId, textbox, output2){
 				body: '{"text":"'+ input +'","source":"en","target":"'+ othLang +'"}'
 			};
 			console.log(options2.body)
+			//fetch api and output into textbox 
 			fetch('https://deepl-translator.p.rapidapi.com/translate/', options2)
 				.then(response => response.json())
 				.then(response => output2.text((response.text)))
