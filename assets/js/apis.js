@@ -130,7 +130,7 @@ var languages = {
 var selectorEl = $('.language-button');
 var key
 var output = $("#googleForm")
-var output2 = $('#transloForm')
+var output2 = $('#deeplForm')
 
 
 function translate (elementId, textbox, output2){
