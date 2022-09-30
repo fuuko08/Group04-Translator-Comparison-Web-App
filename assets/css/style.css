@@ -16,22 +16,34 @@
     background-color: white;
 }
 
-.language-button {
-    width: 250px;
+.dropdown {
+    width: 300px;
     height: 100%;
     margin-right: 7px;
     text-align: left;
-    background-color: rgb(227, 224, 224);
+    background-color: rgb(219, 217, 217);
     color: black;
     font-size: 16px;
     border: none;
+    padding: 4px;
+}
+
+.language-button {
+    background-color: rgb(219, 217, 217);
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    border: none;
+    padding: 4px;
 }
 
 .translate-button {
     border-radius: 3px;
     padding-left: 14px;
     padding-right: 14px;
-    
+    font-size: 16px;
 }
 
 .dropdown-menu {
@@ -41,6 +53,7 @@
 .clear-button {
     border-color: rgb(227, 224, 224);
     padding: 5px 14px;
+    font-size: 16px;
 }
 
 .btn-group {
@@ -57,27 +70,21 @@
 
 @media only screen and (max-width: 767px) {
     #englishForm {
-        height: 90px;
-    }
-    }
+    height: 90px;
+}
+}
 
 @media only screen and (max-width: 767px) {
     #googleForm, #deeplForm {
-        height: 150px;
+    height: 150px;
 }
 }
 
 @media only screen and (min-width: 768px) {
     #googleForm, #deeplForm {
-        height: 350px;
+    height: 350px;
 }
 }
-
-/* @media only screen and (min-width: 1300px) {
-    #exampleFormControlTextarea1Bottom {
-        height: 500px;
-    }
-    } */
 
 @media only screen and (min-width: 1500px) {
     #googleForm, #deeplForm {
@@ -87,7 +94,7 @@
 
 @media only screen and (min-width: 1915px) {
     #googleForm, #deeplForm {
-        height: 860px;
+    height: 860px;
 }
 }
 
@@ -98,45 +105,34 @@
     justify-content: start;
     margin-top: 8px;
 }
-.clear-button  {
-    margin-top: 12px;
-    float: none;
+.clear-button, .translate-button  {
+    margin-top: 4px;
 }
-}
-
-@media only screen and (max-width: 382px) {
 .translate-button  {
-    margin-top: 12px;
-}
-}
-
-/* @media only screen and (max-width: 452px) {
-    .clear-button {
-        display: flex;
-        flex-wrap: wrap;
-        float: none;
-        margin-left: 75px;
-    }
-    } */
-
-@media only screen and (max-width: 455px) {
+    margin-right: 10px;
+} 
 .language-button {
-    display: block;
-    margin-bottom: 8px;
     width: 100%;
-    width: 100vw;
+}
+}
+
+@media only screen and (max-width: 452px) {
+.dropdown {
+    display: block; 
+    margin-bottom: 8px;
+    margin-right: 0px;
+    width: 100% !important; 
 }
 .english-buttons {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    width: 15vw;
-    display: block;
+}
+.mt-3 {
+    display: flex;
+    flex-wrap: wrap;
 }
 }
-
-/* .float-right {
-    float: right;
-} */
-
 
 
    
