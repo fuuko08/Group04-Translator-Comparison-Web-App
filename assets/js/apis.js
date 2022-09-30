@@ -132,6 +132,7 @@ var key
 var output = $("#googleForm")
 var output2 = $('#deeplForm')
 
+
 //start translate function 
 function translate (elementId, textbox, output2){
 	//on change of language dropdown
