@@ -18,7 +18,6 @@ var languages = {
 	Chechen : "ce",
 	Chichewa : "ny",
 	Chinese : "zh",
-	Chinese : "zh",
 	Chuvash : "cv",
 	Cornish : "kw",
 	Corsican : "co",
@@ -127,50 +126,55 @@ var languages = {
 	Yiddish : "yi",
 	Yoruba: "yo"
 };
-var selectorEl = $('#selector');
-var outputEl = $('#output');
-var key
-var output
 
-function translate (elementId, textbox){
-	elementId.on("change", function(){
-			key = elementId.val()
-		$(".btn").on("click", function (){
-			var input = $("#input").val();
-			var othLang = languages[key]
-			console.log(key)
+var selectorEl = $('.language-button');
+var key = $("#languageDropdownList");
 
+async function requestTranslateServer(){
+	var firstString;
+	var secondString;
+
+	var input = $("#englishForm").val();			
+			var othLang = languages[key.val()];			
 			const encodedParams = new URLSearchParams();
-			encodedParams.append("from", "en");
-			encodedParams.append("to", othLang);
-			encodedParams.append("text", input);
-
+			encodedParams.append("q", input);
+			encodedParams.append("target", othLang);
+			encodedParams.append("source", "en");
+			
 			const options = {
 				method: 'POST',
 				headers: {
 					'content-type': 'application/x-www-form-urlencoded',
-					'X-RapidAPI-Key': '94980d4f8fmsh3ea588e95ea87e9p12c6c1jsndb591e698148',
-					'X-RapidAPI-Host': 'translo.p.rapidapi.com'
+					'Accept-Encoding': 'application/gzip',
+					'X-RapidAPI-Key': 'b040e1d4c8msh2f79eae3582160bp117d2fjsndfc4e58700d9',
+					'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
 				},
 				body: encodedParams
 			};
-			console.log(textbox.text())
-			fetch('https://translo.p.rapidapi.com/api/v3/translate', options)
-				.then(response => response.json())
-				// .then(response =>  localStorage.setItem("translo",))
-				.then(response => textbox.html(response.translated_text))
-					// function() {
-					// output = localStorage.getItem("translo")
-					// output = JSON.stringify(output)
-					// return output
-					// }))
-				.catch(err => console.error(err))
 
+			const options2 = {
+				method: 'POST',
+				headers: {
+					'content-type': 'application/json',
+					'X-RapidAPI-Key': '94980d4f8fmsh3ea588e95ea87e9p12c6c1jsndb591e698148',
+					'X-RapidAPI-Host': 'deepl-translator.p.rapidapi.com'
+				},
+				body: '{"text":"'+ input +'","source":"en","target":"'+ othLang +'"}'
+			};
+			
+			await fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)				
+				.then((response) => {return response.json();})				
+				.then(async (response) => {
+					firstString = response.data.translations[0].translatedText;
+					await fetch('https://deepl-translator.p.rapidapi.com/translate/', options2)
+				.then((res) => {return res.json();})
+					.then((data) => { 
+						secondString = data.text;
+						
+					})
+					.catch(err => console.error(err));
+				})				
+				.catch(err => console.error(err));
 
-				
-		})
-	});
-
-}
-
-translate(selectorEl, outputEl);
+				return [firstString, secondString];
+};

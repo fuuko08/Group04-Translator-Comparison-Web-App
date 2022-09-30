@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="Description" content="Enter your description here" />
@@ -13,96 +12,109 @@
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<title>Translater Comparison</title>
-=======
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
-    <title>Document</title>
->>>>>>> ffa2a3baac96b1c618de8b90b5e017f01acc9c6b
 </head>
 
 <body>
-<<<<<<< HEAD
 	<header class="container-fluid bg-custom">
 		<nav class="navbar navbar-light bg-custom">
 			<a class="navbar-brand" href="#">
-				<img src="./images/globe-icon.png" width="30" height="30" class="d-inline-block align-top my-color" alt="">
+				<img src="./images/globe-icon2.png" width="30" height="30" class="d-inline-block align-top my-color" alt="">
 				Translater Comparison
 			</a>
 		</nav>
 	</header> 
-	<main class="container">
-			<div class="row px-3">
-				<section class="col-12 my-5 p-0">
-					<form>
-						<div class="form-group">
-							<label for="exampleFormControlTextarea1">English</label>
-							<textarea class="form-control border-dark" rows="7" placeholder="Enter Text" id="englishText"></textarea>
-							<!-- Dropdown -->
-							</div class="float-left"><div>
-							<div class="btn-group">
-								<button class="btn btn-secondary btn-sm dropdown-toggle language-button" type="button" data-toggle="dropdown" aria-expanded="false">Italian</button>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Spanish</a>
-									<a class="dropdown-item active" href="#">Italian</a>
-									<a class="dropdown-item" href="#">French</a>
-								</div>
+	<main class="container-fluid">
+		<div class="row px-3">
+			<section class="col-12 my-5 p-0">
+				<form>
+					<div class="form-group">
+						<label for="englishForm">English</label>
+						<textarea class="form-control border-dark" id="englishForm" rows="7" placeholder="Enter Text"></textarea>
+						<!-- Dropdown -->
+						<div class="mt-3 d-flex">
+							<div class="">
+								<select id="languageDropdownList" class="btn btn-secondary btn-sm dropdown-toggle language-button"  name="languages" data-toggle="dropdown" aria-expanded="false">
+									<option value="Select a Language">
+										Select a Language
+									</option>
+									<option value="Catalan">
+										Catalan
+									</option>
+									<option value="Chinese">
+										Chinese
+									</option>
+									<option value="French">
+										French
+									</option>
+									<option value="German">
+										German
+									</option>
+									<option value="Greek">
+										Greek
+									</option>
+									<option value="Hebrew">
+										Hebrew
+									</option>
+									<option value="Italian">
+										Italian
+									</option>
+									<option value="Japanese">
+										Japanese
+									</option>
+									<option value="Portuguese">
+										Portuguese
+									</option>
+									<option value="Spanish">
+										Spanish
+									</option>
+									<option value="Thai">
+										Thai
+									</option>
+									<option value="Vietnamese">
+										Vietnamese
+									</option>
+								
+								</select>
 							</div>
-								<!-- Clear and Translate Buttons -->
-								<button type="button" class="btn btn-primary btn-sm translate-button" id="translateBtn">Translate</button>
-									<div class="float-right">
-									<button type="button" class="btn btn-light btn-sm clear-button" id="clearBtn">Clear</button>
-								</div>
+							<!-- Clear and Translate Buttons -->	
+							<div class ="english-buttons w-100">
+								<button type="button" id="translateBtn" class="btn btn-primary btn-sm translate-button">Translate</button>
+								<button type="button" id="clearBtn" class="btn btn-light btn-sm clear-button">Clear</button>
 							</div>	
 						</div>	
-					</form>
-				</section>
-			</div>
-
-			<!-- Selina makes this temporary div to test out the highlight function. This div should be moved to the textarea2. -->
-			<div class="row px-3">
-				<div class="editable form-group" id="testArea" contenteditable="true"> </div>
-			</div>
-		
-			<div class="row px-3">
-				<div class="col-12 col-md-6 p-0 pr-md-2" id="google-translate">
-					<div class="form-group">
-						<label for="exampleFormControlTextarea1">Google Translate Version</label>
-						<textarea class="form-control border-dark bottom-field" id="textarea1" rows="9"></textarea>
 					</div>
-					</div>
-					<div class="col-12 col-md-6 p-0 pl-md-2" id="translo-translate">
-						<div class="form-group">
-						<label for="exampleFormControlTextarea2">Translo Version</label>
-						<textarea class="form-control border-dark bottom-field" id="textarea2" rows="9"></textarea>
-						</div>
-
-					<!-- Cancel and Save Buttons -->
-					<!-- <div class="float-right">
-						<button type="button" class="btn btn-light">Cancel</button>
-						<button type="button" class="btn btn-save">Save</button>
-					</div> -->
+				</form>
+			</section>
+		</div>
+	
+		<div class="row px-3">
+			<div class="col-12 col-md-6 p-0 pr-md-2" id="google-translate">
+				<div class="form-group">
+				<label for="googleForm">Google Translate Version</label>
+				<div class="form-control border-dark bottom-field" id="googleForm" rows="9" disabled>
+				</div>
 				</div>
 			</div>
+			<div class="col-12 col-md-6 p-0 pl-md-2" id="deepl-translate">
+				<div class="form-group">
+				<label for="deeplForm">DeepL Version</label>
+				<div class="form-control border-dark bottom-field" id="deeplForm" rows="9" disabled>
+				</div>
+			</div>
+				<!-- Cancel and Save Buttons -->
+				<!-- <div class="float-right">
+					<button type="button" class="btn btn-light">Cancel</button>
+					<button type="button" class="btn btn-save">Save</button>
+				</div> -->
+		</div>
 	</main>
-    <select class="form-select" id="selector" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option >French</option>
-        <option >English</option>
-        <option >Spanish</option>
-      </select>
-    <input type="text" id="input" ></input>
-    <button class="btn">submit</button>
-    <script type ='text/javaScript' src = "./assets/js/translato.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <p id="output"></p>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+	crossorigin="anonymous">
+	</script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
 	integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
 	crossorigin="anonymous">
@@ -111,4 +123,7 @@
 	integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" 
 	crossorigin="anonymous">
 </script>
+<script src="./assets/js/apis.js"></script> 
 <script src="./assets/js/script.js"></script>
+
+</html>
