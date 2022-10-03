@@ -146,7 +146,7 @@ async function requestTranslateServer(){
 				headers: {
 					'content-type': 'application/x-www-form-urlencoded',
 					'Accept-Encoding': 'application/gzip',
-					'X-RapidAPI-Key': 'b040e1d4c8msh2f79eae3582160bp117d2fjsndfc4e58700d9',
+					'X-RapidAPI-Key': '94980d4f8fmsh3ea588e95ea87e9p12c6c1jsndb591e698148',
 					'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
 				},
 				body: encodedParams
