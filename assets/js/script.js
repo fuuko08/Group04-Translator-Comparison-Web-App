@@ -20,10 +20,14 @@ jQuery(function($) {
         var highlightPosArray = [];
 
 // function to put all the unmatched words into and array
-        jQuery.each(firstStringArray, function(indexArr2, itemArr2){
-            if(itemArr2 == secondStringArray[indexArr2]){               
-            }else{                
+        jQuery.each(firstStringArray, function(indexArr2, itemArr2) {
+            if (firstStringArray.includes(secondStringArray[indexArr2])) {              
+            } else { 
+                if (secondStringArray[indexArr2] === undefined) {
+                } else {           
                 highlightPosArray.push(indexArr2);
+                console.log(highlightPosArray);
+                }
             }
         }); 
 
