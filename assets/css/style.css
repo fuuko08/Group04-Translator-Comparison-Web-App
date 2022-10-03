@@ -1,42 +1,45 @@
+/* Navbar */
 .bg-custom {
     background-color: #f1f1f4;
     margin-bottom: -20px;
 }
 
+/* Text Fields */
 #google-translate {
     padding-right: 10px;
-}
-
-.btn-save {
-    background-color: rgb(15, 153, 15);
-    color: white;
 }
 
 .bottom-field:disabled {
     background-color: white;
 }
 
+/* Buttons */
+.btn-save {
+    background-color: rgb(15, 153, 15);
+    color: white;
+}
+
 .dropdown {
     width: 300px;
-    height: 100%;
     margin-right: 7px;
-    text-align: left;
+}
+
+.dropdown, .language-button {
     background-color: rgb(219, 217, 217);
+    height: 100%;
+    text-align: left;
     color: black;
     font-size: 16px;
     border: none;
     padding: 4px;
 }
 
+.dropdown-menu {
+    width: 250px;
+}
+
 .language-button {
-    background-color: rgb(219, 217, 217);
-    height: 100%;
     width: 100%;
-    text-align: left;
-    color: black;
-    font-size: 16px;
-    border: none;
-    padding: 4px;
 }
 
 .translate-button {
@@ -44,10 +47,6 @@
     padding-left: 14px;
     padding-right: 14px;
     font-size: 16px;
-}
-
-.dropdown-menu {
-    width: 250px;
 }
 
 .clear-button {
@@ -59,6 +58,7 @@
 .btn-group {
     margin-top: 8px;
 }
+
 .english-buttons {
    display: flex; 
    justify-content: space-between; 
@@ -68,6 +68,7 @@
     float: right;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 767px) {
     #englishForm {
     height: 90px;
